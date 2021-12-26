@@ -10,7 +10,7 @@ export function randomMaze(grid, startNode, finishNode) {
         (row === finishNode.row && col === finishNode.col)
       )
         continue;
-      if (Math.random() < 0.33) {
+      if (Math.random() < 0.15  ) {
         walls.push([row, col]);
       }
     }
