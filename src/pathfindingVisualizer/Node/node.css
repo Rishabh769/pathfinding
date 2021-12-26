@@ -1,7 +1,7 @@
 .node {
   width: var(--width);
   height: var(--height);
-  background-color:rgba(255, 255, 255, 0.863);
+  background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   /* border: 1px solid rgb(175, 216, 248); */
   /*   outline: 0.2px solid rgb(175, 216, 248); */
@@ -10,15 +10,14 @@
 
 .node-start {
   background-image: url(./start.png);
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .node-finish {
   background-image: url(./target.png);
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
-  
 }
 
 .node-finish-reached {
@@ -35,6 +34,11 @@
   background-color: rgba(2, 36, 51, 0);
   border: 1px solid rgba(2, 36, 51, 0);
   display: inline-block;
+  animation-name: mouseAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 
 .node-wall-animated {
@@ -57,7 +61,6 @@
 }
 
 .node-shortest-path {
-  
   animation-name: shortestPathAnimation;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
@@ -88,6 +91,32 @@
     transform: scale(1);
     background-color: rgba(255, 255, 255, 0);
     /* border: 1px solid rgb(2, 36, 51); */
+  }
+}
+@keyframes mouseAnimation {
+  0% {
+    transform: scale(1.4);
+    background-color: rgb(0, 0, 0);
+    /* border-radius: 30%; */
+  }
+
+  50% {
+    transform: scale(1.15);
+    background-color: rgba(0, 0, 0, 0.74);
+    /* border-radius: 20%; */
+  }
+
+  75% {
+    transform: scale(0.3);
+    background-color: rgb(0, 217, 255);
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0);
+    /* border: 1px solid rgb(2, 36, 51); */
+    border-radius: 0;
   }
 }
 
