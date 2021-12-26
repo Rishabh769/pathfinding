@@ -3,7 +3,7 @@
   color: rgb(175, 216, 248);
 }
 .navbar {
- height: 8vh;
+  height: 8vh;
 }
 .navbar-brand {
   margin-right: 35px;
@@ -13,6 +13,10 @@
   margin-right: 35px;
   padding: 5px 5px;
 }
+/* .random {
+  color: #fff;
+  text-decoration: none !important;
+} */
 
 .dropdown-menu {
   margin-right: 35px;

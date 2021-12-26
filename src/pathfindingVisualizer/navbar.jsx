@@ -67,12 +67,10 @@ class NavBar extends Component {
         this.props.visualizeDijkstra();
       else if (this.state.algorithm === "Visualize A*")
         this.props.visualizeAStar();
-      
       else if (this.state.algorithm === "Visualize Breadth First Search")
         this.props.visualizeBFS();
       else if (this.state.algorithm === "Visualize Depth First Search")
         this.props.visualizeDFS();
-    
     }
   }
 
@@ -151,14 +149,22 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a
-          className="navbar-brand h1 mb-0"
-          href="/"
-        >
+        <a className="navbar-brand h1 mb-0" href="/">
           {brand}
         </a>
         <div className="navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
+            <li>
+              <button
+                type="button"
+                className="btn btn-info"
+                onClick={() => {
+                  window.location.replace("/");
+                }}
+              >
+                Randomize Pts
+              </button>
+            </li>
             <li className="nav-item dropdown">
               <div className="dropdown">
                 <button
@@ -186,9 +192,7 @@ class NavBar extends Component {
                   >
                     A* Algorithm
                   </button>
-                  
-                  
-                
+
                   <button
                     className="dropdown-item btn-light"
                     type="button"
@@ -207,7 +211,6 @@ class NavBar extends Component {
                   >
                     Depth First Search
                   </button>
-                  
                 </div>
               </div>{" "}
             </li>
