@@ -67,16 +67,12 @@ class NavBar extends Component {
         this.props.visualizeDijkstra();
       else if (this.state.algorithm === "Visualize A*")
         this.props.visualizeAStar();
-      else if (this.state.algorithm === "Visualize Greedy BFS")
-        this.props.visualizeGreedyBFS();
-      else if (this.state.algorithm === "Visualize Bidirectional Greedy")
-        this.props.visualizeBidirectionalGreedySearch();
+      
       else if (this.state.algorithm === "Visualize Breadth First Search")
         this.props.visualizeBFS();
       else if (this.state.algorithm === "Visualize Depth First Search")
         this.props.visualizeDFS();
-      else if (this.state.algorithm === "Visualize Random Walk")
-        this.props.visualizeRandomWalk();
+    
     }
   }
 
@@ -157,7 +153,7 @@ class NavBar extends Component {
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <a
           className="navbar-brand h1 mb-0"
-          href="https://rohithaug.github.io/pathfinding-visualizer/"
+          href="/"
         >
           {brand}
         </a>
@@ -190,23 +186,9 @@ class NavBar extends Component {
                   >
                     A* Algorithm
                   </button>
-                  <button
-                    className="dropdown-item btn-light"
-                    type="button"
-                    onClick={() => this.selectAlgorithm("Visualize Greedy BFS")}
-                  >
-                    Greedy Best First Search
-                  </button>
-                  <button
-                    className="dropdown-item btn-light"
-                    type="button"
-                    onClick={() =>
-                      this.selectAlgorithm("Visualize Bidirectional Greedy")
-                    }
-                  >
-                    Bidirectional Greedy Search
-                  </button>
-                  <div className="dropdown-divider"></div>
+                  
+                  
+                
                   <button
                     className="dropdown-item btn-light"
                     type="button"
@@ -225,15 +207,7 @@ class NavBar extends Component {
                   >
                     Depth First Search
                   </button>
-                  <button
-                    className="dropdown-item btn-light"
-                    type="button"
-                    onClick={() =>
-                      this.selectAlgorithm("Visualize Random Walk")
-                    }
-                  >
-                    Random Walk
-                  </button>
+                  
                 </div>
               </div>{" "}
             </li>

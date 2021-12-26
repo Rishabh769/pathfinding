@@ -2,7 +2,9 @@
 .navbar > .navbar-brand:focus {
   color: rgb(175, 216, 248);
 }
-
+.navbar {
+ height: 8vh;
+}
 .navbar-brand {
   margin-right: 35px;
 }
